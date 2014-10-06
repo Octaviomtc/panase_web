@@ -1,466 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>PANASE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      #map_canvas { width: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAYbvMq01gJdBRvJwNWlh2yQJjS5TmgNbc&sensor=SET_TO_TRUE_OR_FALSE">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(19.455254, -99.217123),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
 
-<!-- Google Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-<!--[if IE]>
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
-<![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<link href="<?=base_url()?>includes/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?=base_url()?>includes/css/font-awesome.min.css" rel="stylesheet">
-<link href="<?=base_url()?>includes/css/theme.css" rel="stylesheet">
-<link id="colours" rel="stylesheet" href="<?=base_url()?>includes/css/colour.css" />
-<link href="<?=base_url()?>includes/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
-<link href="<?=base_url()?>includes/css/zocial.css" rel="stylesheet" type="text/css"/>
-<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-<link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/rs-plugin/css/settings.css" media="screen" />
+    <title>PANASE</title>
 
-<!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+    <!-- Bootstrap Core CSS -->
+    <link href="<?=base_url()?>includes/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Retina.js - Load first for faster HQ mobile images. -->
+
+    <!-- Font Awesome -->
+    <link href="<?=base_url()?>includes/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Default Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
+
+    <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
+    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="<?=base_url()?>includes/css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url()?>includes/css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url()?>includes/css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url()?>includes/css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url()?>includes/css/plugins/jquery.fs.wallpaper.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Style Switcher CSS - Demo Purposes Only! -->
+    <link id="changeable-colors" rel="stylesheet" href="<?=base_url()?>includes/css/vitality-red.css">
+    <link href="<?=base_url()?>includes/demo/style-switcher.css" rel="stylesheet">
+    <link href="<?=base_url()?>includes/css/custom.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/style.css" />
+
+    <!-- IE8 support for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+
+    <![endif]-->
+
+
 </head>
 
-<body>
-<!--header-->
-  <div class="header">
-<!--menu-->
-    <nav id="main_menu" class="navbar" role="navigation">
-      <div class="container">
+<!-- Alternate Body Classes: .modern and .vintage -->
+
+<body id="page-top" onload="initialize()">
+
+    <!-- Navigation -->
+    <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-expanded">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-        <!--toggle-->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-        <i class="fa fa-bars"></i>
-      </button>
-    <!--logo-->
-      <div class="logo">
-        <a href="index.html"><img src="<?=base_url()?>includes/img/panase/panase-text.png" alt="" class="animated bounceInDown" /></a> 
-      </div>
-    </div>
-           
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="nav navbar-nav pull-right">
-                        <li class="dropdown active"><a href="javascript:{}">¿Quienes somos?</a> 
-              <ul class="dropdown-menu">
-              <li><a href="index.html">Slider Revolution</a></li>
-              <li><a href="index2.html">Nerve Slider</a></li>
-              <li><a href="index3.html">NivoSlider</a></li>
-              <li><a href="index4.html">Slides</a></li>
-              <li><a href="index5.html">Html5 Video</a></li>
-            </ul>
-              </li>
-              <li class="dropdown"><a href="javascript:{}">Pages</a>
-            <ul class="dropdown-menu">
-                <li><a href="team.html">The Team</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="full.html">Full Width</a></li>
-                <li><a href="left_sidebar.html">Left Sidebar</a></li>
-                <li><a href="right_sidebar.html">Right Sidebar</a></li>
-            </ul>
-              </li>
-              <li class="dropdown"><a href="javascript:{}">Work</a>
-            <ul class="dropdown-menu">
-                <li><a href="portfolio_2columns.html">2 Columns</a></li>
-                <li><a href="portfolio_3columns.html">3 Columns</a></li>
-                <li><a href="portfolio_4columns.html">4 Columns</a></li>
-                <li><a href="portfolio_masonry.html">Masonry</a></li>
-                <li><a href="gallery.html">Paginated Gallery</a></li>
-                <li><a href="video_gallery.html">Video Gallery</a></li>
-                <li><a href="single_portfolio.html">Single Slider</a></li>
-                <li><a href="single_video.html">Single Video</a></li>
-                <li><a href="single_image.html">Single Image</a></li>
-                <li><a href="full_slider.html">Full Slider</a></li>
-                <li><a href="full_video.html">Full Video</a></li>
-            </ul>
-              </li>
-              <li class="dropdown"><a href="javascript:{}">Style</a>
-            <ul class="dropdown-menu">
-                <li><a href="scaffolding.html">Scaffolding</a></li>
-                <li><a href="shortcodes.html">Shortcodes</a></li>
-                <li><a href="icons.html">Icons</a></li>
-                <li><a href="script_examples.html">JS Examples</a></li>
-                <li><a href="javascript:{}">Sub Menu</a>
-              <ul class="dropdown-menu sub-menu">
-                <li><a href="#">Sub One</a></li>
-                <li><a href="#">Sub Two</a></li>
-                <li><a href="#">Sub Three</a></li>
-                <li><a href="#">Sub Four</a></li>
-              </ul>
-            </ul>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  <!--//header-->
-  
-  <!--page-->
-    <!-- REVOLUTION SLIDER -->
-        <div class="tp-banner-container">
-    <div class="tp-banner">
-    <ul>
-    <!-- Slide 1 -->
-      <li data-transition="slideright">
-        <img src="<?=base_url()?>includes/img/slider/slider1.jpg" alt="" />
-        
-        <!-- Caption -->
-        <div class="tp-caption lfr" data-x="left" data-y="220" data-speed="2400" data-start="800" data-easing="easeOutExpo">
-          <img src="<?=base_url()?>includes/img/slider/robot1.png" alt="" />
-        </div>
-          
-        <!-- Caption -->
-        <div class="tp-caption lfb" data-x="870" data-y="150" data-speed="1400" data-start="1800" data-easing="easeOutExpo">
-          <img src="<?=base_url()?>includes/img/slider/rocket.png" alt="" />
-        </div>
-        
-        <!-- Caption -->
-        <div class="tp-caption lfb" data-x="825" data-y="340" data-speed="1500" data-start="1900" data-easing="easeOutExpo">
-          <img src="<?=base_url()?>includes/img/slider/flames.png" alt="" />
-        </div>
-        
-        <!-- Caption -->  
-        <div class="caption sft stl" data-x="center" data-y="150" data-speed="1000" data-start="700" data-easing="easeOutExpo">
-          <h3 class="rev-title bold">FLATI BOOTSTRAP</h3>
-        </div>
-        
-        <!-- Caption -->
-        <div class="caption lfl stl rev-title-sub" data-x="center" data-y="260" data-speed="800" data-start="1100" data-easing="easeOutExpo">
-          CREATE - DESIGN - CODE
-        </div>
-        
-        <!-- Caption -->
-        <div class="caption sfb" data-x="center" data-y="350" data-speed="1100" data-start="1500" data-easing="easeOutExpo">
-          <a href="#" class="btn btn-outline btn-mobile">OUR PORTFOLIO</a>                 
-        </div>
-      </li>
-      
-   
-      </ul>
-      <div class="tp-bannertimer tp-bottom"></div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand img-responsive-cont" href="#page-top">
+                    <img src="<?=base_url()?>includes/img/logo.png" class="img-responsive" alt="">
+                </a>
             </div>
-        </div>
-        <!-- // END REVOLUTION SLIDER -->
 
-  <div id="banner">
-  <div class="container intro_wrapper">
-  <div class="inner_content">
-  
-  <!--welcome-->
-    <div class="welcome_index">
-      I think most <a href="#"><span class="hue_block white normal">programmers</span></a> spend the first 5 years of their career mastering 
-      <span class="hue">complexity</span> and the rest of their lives learning <span>simplicity</span>
-      - Buzz Andersen
-    </div>
-  <!--//welcome-->
-    </div>
-      </div>
-        </div>
-        <!--//banner-->
-      
-  <div class="container wrapper">
-  <div class="inner_content">
-  
-  <!--info boxes-->
-  <div class="row pad45">
-      <div class="col-sm-6 col-md-3">
-        <div class="tile">
-          <div class="intro-icon-disc cont-large"><i class="fa fa-pencil intro-icon-large"></i></div>
-          <h6>
-            <span>DESIGN<br><a href="#">built for &amp; by nerds</a></span>
-          </h6>
-          <p>
-            Like you, we love building awesome products on the web. We love it so much, we decided to help people just like us do it easier, 
-            better, and faster.
-          </p>
-          </div> 
-        <div class="pad25"></div>
-      </div> 
-        
-      <div class="col-sm-6 col-md-3">
-        <div class="tile">
-          <div class="intro-icon-disc cont-large"><i class="fa fa-umbrella intro-icon-large"></i></div>
-            <h6>
-              <span>CODE<br><a href="#">12-column grid</a></span>
-            </h6>
-            <p>
-              Bootstrap is designed to help people of all skill levels - designer or developer, huge nerd or early beginner. 
-              Use it as a complete kit or use to start something.
-            </p>
-            </div> 
-        <div class="pad25"></div>
-      </div> 
-          
-      <div class="col-sm-6 col-md-3">
-        <div class="tile">
-          <div class="intro-icon-disc cont-large"><i class="fa fa-flask intro-icon-large"></i></div>
-            <h6><span>CREATE<br><a href="#">responsive</a></span></h6>
-            <p>
-              Bootstrap have gone fully responsive. Our components are scaled according to a range of resolutions and devices to provide a 
-              consistent experience.
-            </p>  
-            </div> 
-        <div class="pad25"></div>
-      </div> 
-        
-      <div class="col-sm-6 col-md-3">
-        <div class="tile tile-hot">
-          <div class="intro-icon-disc cont-large"><i class="fa fa-book  intro-icon-large"></i></div>
-            <h6>
-              <span>SUPPORT<br><a href="#">growing library</a></span></h6>
-            <p>
-              Despite being only 7kb (gzipped), Bootstrap is one of the most complete front-end toolkits out there with dozens of fully functional components.
-            </p>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a href="#empresa">Empresa</a>
+                    </li>
+                    <li>
+                        <a href="#personal">Personal</a>
+                    </li>
+                    <li>
+                        <a href="#clientes">Clientes</a>
+                    </li>
+                    <li>
+                        <a href="#consejos">Consejos de seguridad</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Cotizaciones y contacto</a>
+                    </li>
+                    <li>
+                        <a href="#servicios">Servicios especiales</a>
+                    </li>
+                </ul>
             </div>
-          <div class="pad25"></div> 
-      </div> 
-        </div> 
-        
-      <!--//info boxes-->
-      
-      <div class="pad25 hidden-xs hidden-sm"></div> 
-      <div class="row">
-      <!--col 1-->
-      <div class="col-md-12">
-      <div class="row">
-      
-      <div class="col-sm-12 col-md-4">
-      <h1>Recent Work</h1>
-      <h4>
-        Lorem ipsum dolor sit amet, rebum putant recusabo in ius, pri simul tempor ne, his ei summo virtute.
-      </h4>
-      <p>
-        Nam ea labitur pericula. Meis tamquam pro te, cibo mutat necessitatibus id vim. An his tamquam postulant, pri id mazim nostrud diceret 
-        sapientem eloquentiam sea cu, sea ut exerci delicata. Corrumpit vituperata.
-      </p>
-      
-      <a href="#" class="btn btn-primary btn-custom btn-rounded">view portfolio</a>
-      <div class="pad30"></div>
-      </div>
-      
-      <!--column 2 slider-->
-      <div class="col-xs-12 col-sm-12 col-md-8 pad30">
-      
-      <div id="slider_home">
-            <div class="slider-item"> 
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s1.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s1.jpg" alt="" /></a>
-          </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <div class="slider-title">
-        <h3><a href="#">catalogue</a></h3>
-        <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s2.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s2.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">loupe</a></h3>
-        <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s3.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s3.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">retro rocket</a></h3>
-        <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s4.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s4.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">infographics</a></h3>
-        <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s5.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s5.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">mock up</a></h3>
-          <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-          </div>
-        </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s6.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s6.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">retro badges</a></h3>
-          <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-          </div>
-        </div>
-      
-      <div class="slider-item">
-      <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s7.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s7.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">details</a></h3>
-          <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-      
-      <div class="slider-item">
-        <div class="slider-image">
-        <div class="hover_colour">
-        <a href="img/large/s8.jpg" data-rel="prettyPhoto">
-          <img src="<?=base_url()?>includes/img/small/s8.jpg" alt="" /></a>
-          </div>
-        </div>
-        <div class="slider-title">
-        <h3><a href="#">vintage form</a></h3>
-          <p>An his tamquam postulant, pri id mazim nostrud diceret.</p>
-        </div>
-      </div>
-        </div>
-        <div id="sl-prev" class="widget-scroll-prev"><i class="fa fa-chevron-left white"></i></div>
-        <div id="sl-next" class="widget-scroll-next"><i class="fa fa-chevron-right white but_marg"></i></div>
-      <div class="pad25"></div> </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <!--//page-->
-  </div>
-  
-  <!-- footer -->
-  <div id="footer">
-    <h1>get in touch</h1>
-      <h3 class="center follow">
-        We're social and we'd love to hear from you! Feel free to send us an email, find us on Google Plus, follow us on Twitter and join us on Facebook.
-      </h3>
-  <div class="follow_us">
-    <a href="#" class="fa fa-twitter follow_us"></a>
-    <a href="#" class="fa fa-facebook follow_us"></a>
-    <a href="#" class="fa fa-linkedin follow_us"></a>
-    <a href="#" class="fa fa-google-plus follow_us"></a>
-    <a href="#" class="fa fa-vimeo-square follow_us"></a>
-    </div>
-  </div>
-  
-  <!-- footer 2 -->
-  <div id="footer2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-        <div class="copyright">
-              FLATI
-              &copy;
-              <script type="text/javascript">
-              //<![CDATA[
-                var d = new Date()
-                document.write(d.getFullYear())
-                //]]>
-                </script>
-               - All Rights Reserved :
-              Template by <a href="http://spiralpixel.com">Spiral Pixel</a>
-            </div>
-            </div>
-          </div>
-        </div>
-          </div>
-        <!-- up to top -->
-        <a href="#"><i class="go-top fa fa-angle-double-up"></i></a>
-        <!--//end-->
-        
-<!-- SCRIPTS -->
-<script src="<?=base_url()?>includes/js/jquery.js"></script>      
-<script src="<?=base_url()?>includes/js/bootstrap.min.js"></script> 
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-<script type="text/javascript" src="<?=base_url()?>includes/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
-<script type="text/javascript" src="<?=base_url()?>includes/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<!-- slider settings -->
-<script type="text/javascript">
-  //<![CDATA[
-      jQuery(document).ready(function() {
-          jQuery('.tp-banner').show().revolution(
-        {
-          delay:9000,
-          startwidth:1170,
-          startheight:600,
-          navigationType:"bullet",
-          navigationStyle:"square",
-          hideBulletsOnMobile:"on",
-          hideArrowsOnMobile: "on",
-          shadow:0,
-          fullWidth:"on",
-        });
-      }); 
-    //]]>
-  </script>
+        <!-- /.container -->
+    </nav>
 
-<script src="<?=base_url()?>includes/js/jquery.touchSwipe.min.js"></script>
-<script src="<?=base_url()?>includes/js/jquery.mousewheel.min.js"></script>       
-<script type="text/javascript" src="<?=base_url()?>includes/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="<?=base_url()?>includes/js/scripts.js"></script>
+    <header style="background-image: url('<?=base_url()?>includes/img/panase/equipo59.jpg');">
+        <div class="intro-content">
+            <img src="<?=base_url()?>includes/img/profile.png" class="img-responsive img-centered" alt="">
+            <div class="brand-name">PANASE</div>
+            <hr class="colored">
+            <div class="brand-name-subtext">PANAMERICANA DE SEGURIDAD PRIVADA</div>
 
-<!-- carousel -->
-<script type="text/javascript" src="<?=base_url()?>includes/js/jquery.carouFredSel-6.2.1-packed.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-jQuery(document).ready(function($) {
-  $("#slider_home").carouFredSel({ 
-    width : "100%", 
-    height : "auto",
-    responsive : true,
-    auto : false,
-    items : { width : 280, visible: { min: 1, max: 3 }
-    },
-    swipe : { onTouch : true, onMouse : true },
-    scroll: { items: 1, },
-    prev : { button : "#sl-prev", key : "left"},
-    next : { button : "#sl-next", key : "right" }
-    });
-  });
-//]]>
-</script>
+        </div>
+        <div class="scroll-down">
+            <a class="btn" href="#empresa"><i class="fa fa-angle-down fa-fw"></i></a>
+        </div>
+    </header>
+
+    <section id="empresa">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h1>“Nuestro trabajo es la seguridad, tu tranquilidad es nuestra misión”</h1>
+                    
+                    <hr class="colored">
+                </div>
+            </div>
+            <div class="row text-center content-row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="about-content">
+                         <img src="<?=base_url()?>includes/img/panase-w.png" class="img-responsive img-centered" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-6">
+                    <div class="about-content">
+                        <p><b>PANAMERICANA DE SEGURIDAD PRIVADA, S.A. DE C.V.</b>; es una empresa legalmente constituida en el 2001 y registrada con la finalidad de prestar servicios de seguridad para personas físicas y morales. Se trata de una empresa 100% mexicana que trabaja las 24 horas del día los 365 días del año con prestación de servicios en el Distrito Federal, Estado de México, Oaxaca, Morelos y Querétaro. </p>
+                        <p>Nuestra amplia experiencia dentro del ramo de la seguridad privada nos proporciona la confianza de brindarle el mejor servicio diseñado para adaptarse a sus necesidades de seguridad, brindándole de esta manera la garantía de un servicio profesional.</p>
+                        <p>Nuestro personal está altamente capacitado y entrenado para que responda prudente e inteligentemente al resguardar la seguridad de las personas, que tenga la capacidad de observación a efecto de registrar todo detalle de lo acontecido sabiendo salvaguardar el lugar de los hechos para evitar la destrucción de la evidencia, además de estar capacitados para solicitar primeros auxilios y apoyos oficiales.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+
+    <section id="valores" class="bg-gray">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-5 col-md-offset-1">
+                    <h1><b>Misión</b></h1>
+                    <p>“Somos una empresa de seguridad privada que busca lograr la tranquilidad del cliente a través de una atención personalizada, caracterizada por su dinamismo y solución acertada a sus necesidades, tanto a nivel preventivo como correctivo.”</p>
+                </div>
+                <div class="col-md-5">
+                    <h1><b>Visión</b></h1>
+                    <p>“Somos una empresa de seguridad privada que busca lograr la tranquilidad del cliente a través de una atención personalizada, caracterizada por su dinamismo y solución acertada a sus necesidades, tanto a nivel preventivo como correctivo.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/comandante1.jpg')">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Valores</h2>
+                    <hr class="colored">
+                </div>
+            </div>
+            <div class="row content-row">
+                <div class="col-md-5">
+                    <div class="pricing-item featured-first">
+                        <h3>Responsabilidad</h3>
+                        <hr class="colored">
+                        <p>Conocer la importancia e implicación de sus funciones, respondiendo ante sus aciertos y errores, impulsando y contribuyendo con la cadena de actividades que permita construir  el servicio que ofrece la empresa.</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="pricing-item featured-last">
+                        <h3>Dirección</h3>
+                        <hr class="colored">
+                        <p>De vital importancia para garantizar la seguridad de los clientes, inmuebles o personas, y por ende cumplir satisfactoriamente con el servicio requerido, que el personal reflexione sobre la información que tiene acceso y su debido uso, absteniéndose de divulgarla, hecho que podría generar potenciales situaciones de riesgo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pricing-item featured-first">
+                        <h3>Puntualidad</h3>
+                        <hr class="colored">
+                        <p>Que las funciones propias de cada persona en la empresa, sean cumplidas en el momento adecuado y necesario para integrar la cadena de servicio al cliente. Prestando a cada una el grado de importancia que le corresponde.</p>
+                       
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pricing-item featured-last">
+                        <h3>Lealtad</h3>
+                        <hr class="colored">
+                        <p>Corresponder ante la responsabilidad y confianza que nos son otorgados, cumpliendo ante el compromiso asumido ante la empresa, estableciendo con ello una relación de reciprocidad y certidumbre.</p>
+                       
+                    </div>
+                </div>
+                
+                <div class="col-md-7">
+                    <div class="pricing-item featured-first">
+                        <h3>Proactividad</h3>
+                        <hr class="colored">
+                        <p>Responder ante posibles contingencias eligiendo la mejor opción y aportar soluciones en la medida de lo posible. Proponer acciones que puedan mejorar el desempeño propio, grupal y de la empresa. Sin invadir otras áreas de responsabilidad o implementar cambios sin consulta previa ante el jefe inmediato.</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="pricing-item featured-last">
+                        <h3>Profesionalismo</h3>
+                        <hr class="colored">
+                        <p>Que el desempeño mostrado por cada integrante de PANASE se encuentre dirigido a la eficiencia, con una actitud que vaya acorde a lo esperado y que se distinga por alejarse de conflictos o desviaciones dañinas para un clima laboral óptimo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+
+    <section id="personal" class="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Nuestro personal</h2>
+                    <hr class="colored">
+                    <p></p>
+                </div>
+            </div>
+
+
+
+            
+            <div class="main3">
+            
+                <ul class="ch-grid">
+                    <li>
+                        <div class="ch-item ch-img-1">
+                            <div class="ch-info">
+                                <h3>Alfa</h3>
+                                <p><a href="#">Mas información </a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-item ch-img-2">
+                            <div class="ch-info">
+                                <h3>Beta</h3>
+                                <p><a href="#">Mas información </a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ch-item ch-img-3">
+                            <div class="ch-info">
+                                <h3>Gamma</h3>
+                                <p><a href="#">Mas información </a></p>
+                            </div>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="ch-item ch-img-4">
+                            <div class="ch-info">
+                                <h3>Custodias a bordo</h3>
+                                <p><a href="#">Mas información </a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <hr class="colored">
+
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h3>Estudios de vulnerabilidad y análisis de riesgo</h3>
+                    <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
+                    <p>Se lleva a cabo por personal certificado en la materia. </p>
+                </div>
+            </div>
+     
+        </div>
+    </section>
+
+    <section id="clientes" class="bg-gray">
+        <div class="container text-center">
+            <h2>Nuestros Clientes</h2>
+            <hr class="colored">
+            <p>Empresas, 
+                Residenciales, 
+                Escuelas, 
+                Penales en construcción, 
+                Desarrolladores de vivienda, 
+                Templos</p>
+        </div>
+    </section>
+
+<!--     <section class="portfolio-carousel">
+        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-1.jpg')">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-push-8">
+                        <div class="project-details">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
+                            <span class="project-name">Project Name</span>
+                            <span class="project-description">Branding, Website Design</span>
+                            <hr class="colored">
+                            <a href="#portfolioModal1" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-pull-4 hidden-xs">
+                        <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-2.jpg')">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-push-8">
+                        <div class="project-details">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
+                            <span class="project-name">Project Name</span>
+                            <span class="project-description">Branding, Website Design</span>
+                            <hr class="colored">
+                            <a href="#portfolioModal2" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-pull-4 hidden-xs">
+                        <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-3.jpg')">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-push-8">
+                        <div class="project-details">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
+                            <span class="project-name">Project Name</span>
+                            <span class="project-description">Branding, Website Design</span>
+                            <hr class="colored">
+                            <a href="#portfolioModal3" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-pull-4 hidden-xs">
+                        <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-4.jpg')">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-md-push-8">
+                        <div class="project-details">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
+                            <span class="project-name">Project Name</span>
+                            <span class="project-description">Branding, Website Design</span>
+                            <hr class="colored">
+                            <a href="#portfolioModal4" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-md-pull-4 hidden-xs">
+                        <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p class="lead">CERTIFICACIÓN</p>
+                    <p>Registro Federal de contribuyentes:  PSP 010914  HG2<br>
+                        Registro del I.M.S.S.:  C41 4413910-0<br>
+                        Capacitación y adiestramiento:  FOLIO 311/87449</p>
+                         <img src="<?=base_url()?>includes/img/panase/cer.jpg" class="img-responsive img-centered" alt="">
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consejos" class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/cn.jpg')">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Consejos de seguridad</h2>
+                    <hr class="colored">
+                </div>
+            </div>
+            <div class="testimonials">
+                <div class="row text-center">
+                    <div class="testimonials-carousel">
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p class="lead">Robo a Casa Habitación</p>
+                                            <hr class="colored">
+                                            <p class="quote">En más de la mitad de los casos los delincuentes entran por el frente del domicilio forzando o violando un sistema de seguridad cuando no se encuentra nadie en casa.
+
+Otra modalidad que utilizan los delincuentes para ingresar al domicilio son los engaños, ya sea ofreciendo algún servicio o pidiendo un favor y, una vez adentro, intimidan o someten a las victimas violentamente.
+
+Algunos delincuentes utilizan símbolos geométricos para marcar las casas que tienen en la mira. Dichos símbolos cumplen la función de avisar si la casa está abandonada, si la familia se encuentra de vacaciones, si hay perro, si en ella vive un policía o una mujer sola, si es viable o no robarla o en todo caso si ya fue robada.</p>
+                                            <br>
+                                            Seguir leyendo ...
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p class="lead">La familia: factores de riesgo dentro y fuera de ella.</p>
+                                            <hr class="colored">
+                                            <p class="quote">La familia es el primer núcleo afectivo de pertenencia de todo individuo, representa aquel espacio donde se comparte un mismo ambiente físico y emocional, es allí donde se desarrollan vínculos diversos, se transmiten aspectos culturales, valores y normas y se dan procesos que influyen en el desarrollo físico, psíquico y social del ser humano.</p>
+                                            <br>
+                                            Seguir leyendo ...
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                              
+
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <p class="lead">EXTORSIÓN CON AMENAZA DE SECUESTRO</p>
+                                            <hr class="colored">
+                                            <p class="quote">La extorsión, es de los delitos que en los últimos años han cobrado importancia a nivel nacional en temas de seguridad.  En la actualidad es importante que la ciudadanía esté consciente de cómo enfrentar a la delincuencia en este tema, y por ello, tenemos que ir avanzando en el terreno de la cultura en dos vertientes, una, la cultura del auto cuidado y dos, la cultura de la denuncia.</p>
+                                            <br>
+                                            Seguir leyendo ...
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                               
+                    
+                            </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contáctanos</h2>
+                    <hr class="colored">
+                    <p>Déjanos tus datos y un representante se pondrá en contacto contigo.</p>
+                </div>
+            </div>
+            <div class="row content-row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Dirección</label>
+                                <input type="text" class="form-control" placeholder="Dirección" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Télefono</label>
+                                <input type="tel" class="form-control" placeholder="Télefono" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Mensaje</label>
+                                <textarea rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="map_canvas" style="width:100%; height:400px;"></div>
+ 
+
+    <footer class="footer" style="background-image: url('<?=base_url()?>includes/img/panase/foo.jpg')">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-phone"></i></h4>
+                    <p>53-58-59-64</p>
+                    <p>53-58-59-74</p>
+                </div>
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-map-marker"></i></h4>
+                    <p>Ricardo Torres No 8<br> Lomas de Sotelo<br>Naucalpan Edo de México</p>
+                </div>
+                <div class="col-md-4 contact-details">
+                    <h4><i class="fa fa-envelope"></i></h4>
+                    <p><a href="mailto:feedback@startbootstrap.com">seguridadpanase@gmail.com </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row social">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-lg-12">
+                    <p class="small">&copy; 2014 COREDEV & PANAMERICANA DE SEGURIDAD PRIVADA, S.A. DE C.V</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Example Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-1.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-2.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-3.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Example Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-4.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Core Scripts -->
+    <script src="<?=base_url()?>includes/js/jquery-1.10.2.js"></script>
+    <script src="<?=base_url()?>includes/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="<?=base_url()?>includes/js/plugins/jquery.easing.min.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/classie.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/jquery.fs.wallpaper.js"></script>
+    <script src="<?=base_url()?>includes/js/contact_me.js"></script>
+    <script src="<?=base_url()?>includes/js/plugins/jqBootstrapValidation.js"></script>
+
+    <!-- Vitality Theme Scripts -->
+    <script src="<?=base_url()?>includes/js/vitality.js"></script>
+
+    <!-- Style Switcher Scripts - Demo Purposes Only! -->
+    <script src="<?=base_url()?>includes/demo/style.switcher.js"></script>
+
 </body>
+
 </html>
 
 <!-- Localized -->
