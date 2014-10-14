@@ -55,7 +55,7 @@ a:focus {
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -1161,4 +1161,17 @@ body.vintage .testimonials .testimonials-carousel .item .testimonial-info .testi
 body.vintage .testimonials .testimonials-carousel .owl-controls .owl-prev,
 body.vintage .testimonials .testimonials-carousel .owl-controls .owl-next {
     line-height: 55px;
+}
+
+.row-modal{
+    margin: 20px;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.nuestro_personal{
+    margin-top: 50px;
+    margin-bottom: 100px;
 }

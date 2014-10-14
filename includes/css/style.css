@@ -119,3 +119,7 @@
 .ch-item:hover .ch-info p {
 	opacity: 1;
 }
+
+.img100{
+	width: 100%;
+}
