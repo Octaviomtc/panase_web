@@ -189,6 +189,38 @@
 
         <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/comandante1.jpg')">
         <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row text-center">
                 <div class="col-lg-12">
                     <h2>Valores</h2>
@@ -264,7 +296,7 @@
                 <div class="col-lg-3">
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/alfa2T.jpg" alt="Generic placeholder image" style="width: 160px; height: 160px;">
                   <h3>ALFA</h3>
-                  <p>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</p>
+                  <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".alfa">Conoce más »</button></p>
                 </div>
 
@@ -272,7 +304,7 @@
                 <div class="modal fade alfa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="container row-modal">
+                      <div class="row-modal">
                           <div class="row">
                               
                               <div class="col-md-7">
@@ -316,9 +348,9 @@
 
 
                 <div class="col-lg-3">
-                  <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 160px; height: 160px;">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/beta2t.jpg" alt="Generic placeholder image" style="width: 160px; height: 160px;">
                   <h3>BETA</h3>
-                  <p>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</p>
+                  <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".beta">Conoce más »</button></p>
                 </div>
 
@@ -326,7 +358,42 @@
                 <div class="modal fade beta" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      ...
+                      <div class="row-modal">
+                          <div class="row">
+                              
+                              <div class="col-md-7">
+                                <p>
+                                    <h2>BETA</h2>
+                                    <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
+                                    <br>
+                                     <ul class="text-left">
+                                         <li>Entrenados para prevenir y evitar riesgos.</li>
+                                         <li>Equipados con gas pimienta y PR-24.</li>
+                                         <li>Puede ser contratado en turnos de 24 o 12 horas.</li>
+                                         <li>Su uniforme es totalmente identificable como guardia de seguridad, pero al mismo tiempo es afable y ligero.</li>
+                                         <li>Tiene conocimiento en Defensa Personal</li>
+                                     </ul>
+                            
+                                    <b>El elemento tiene una especialidad en:</b>
+                                     
+                                    <ul class="text-left">
+                                        <li>Control de accesos</li>
+                                        <li>Rondines perimetrales</li>
+                                        <li>Atención al usuario</li>
+                                        <li>Primeros Auxilios</li>
+                                        <li>Conato de Incendios</li>
+                                        <li>Brigadas de evacuación en emergencias</li>
+                                        <li>Manejo en la llamada de extorsión y amenaza de bomba</li>
+                                    </ul>
+
+                                    <b>Recomendado para escuelas, residenciales, empresas.</b>
+                                </p>
+                              </div>
+                              <div class="col-md-5">
+                                  <img src="<?=base_url()?>includes/img/panase/beta2.jpg" alt="alfa" class="img100">
+                              </div>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -338,7 +405,7 @@
                 <div class="col-lg-3">
                   <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 160px; height: 160px;">
                   <h3>GAMA</h3>
-                 <p>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</p>
+                 <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".gama">Conoce más »</button></p>
                 </div>
 
@@ -357,7 +424,7 @@
                 <div class="col-lg-3">
                   <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 160px; height: 160px;">
                   <h3>CUSTODIAS</h3>
-                  <p>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</p>
+                  <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".custodia">Conoce más »</button></p>
                 </div>
 
@@ -374,6 +441,12 @@
 
                 </center>
               </div>
+
+            <div class="row text-center">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h3>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad</h3>
+                </div>
+            </div>
 
 
             <div class="row text-center">
