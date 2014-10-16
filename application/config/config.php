@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/panase';
+$config['base_url']	= 'http://localhost/panase_web';
 
 /*
 |--------------------------------------------------------------------------

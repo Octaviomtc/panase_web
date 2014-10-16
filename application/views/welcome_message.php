@@ -12,8 +12,15 @@
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
+          scrollwheel: false,
+          navigationControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            draggable: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
           center: new google.maps.LatLng(19.455254, -99.217123),
-          zoom: 15,
+          zoom: 16,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -40,13 +47,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
 
-    <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
 
-    <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
-    <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
     <link href="<?=base_url()?>includes/css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
@@ -57,7 +58,7 @@
 
 
     <!-- Style Switcher CSS - Demo Purposes Only! -->
-    <link id="changeable-colors" rel="stylesheet" href="<?=base_url()?>includes/css/vitality-red.css">
+    
     <link href="<?=base_url()?>includes/demo/style-switcher.css" rel="stylesheet">
     <link href="<?=base_url()?>includes/css/custom.css" rel="stylesheet">
 
@@ -65,6 +66,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/common.css" />
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/style.css" />
+        <link id="changeable-colors" rel="stylesheet" href="<?=base_url()?>includes/css/vitality-red.css">
 
     <!-- IE8 support for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -113,15 +115,16 @@
                     <li>
                         <a href="#clientes">Clientes</a>
                     </li>
-                    <li>
-                        <a href="#consejos">Consejos de seguridad</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Cotizaciones y contacto</a>
-                    </li>
-                    <li>
+                     <li>
                         <a href="#servicios">Servicios especiales</a>
                     </li>
+                    <li>
+                        <a href="#consejos">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -143,7 +146,7 @@
     </header>
 
     <section id="empresa">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row text-center">
                 <div class="col-lg-12">
                     <h1>“Nuestro trabajo es la seguridad, tu tranquilidad es nuestra misión”</h1>
@@ -152,34 +155,41 @@
                 </div>
             </div>
             <div class="row text-center content-row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-6 col-md-offset-3">
                     <div class="about-content">
                          <img src="<?=base_url()?>includes/img/panase-w.png" class="img-responsive img-centered" alt="">
                     </div>
                 </div>
 
-                <div class="col-md-8 col-sm-6">
+                <div class="col-md-10 col-md-offset-1">
                     <div class="about-content">
                         <p><b>PANAMERICANA DE SEGURIDAD PRIVADA, S.A. DE C.V.</b>; es una empresa legalmente constituida en el 2001 y registrada con la finalidad de prestar servicios de seguridad para personas físicas y morales. Se trata de una empresa 100% mexicana que trabaja las 24 horas del día los 365 días del año con prestación de servicios en el Distrito Federal, Estado de México, Oaxaca, Morelos y Querétaro. </p>
                         <p>Nuestra amplia experiencia dentro del ramo de la seguridad privada nos proporciona la confianza de brindarle el mejor servicio diseñado para adaptarse a sus necesidades de seguridad, brindándole de esta manera la garantía de un servicio profesional.</p>
                         <p>Nuestro personal está altamente capacitado y entrenado para que responda prudente e inteligentemente al resguardar la seguridad de las personas, que tenga la capacidad de observación a efecto de registrar todo detalle de lo acontecido sabiendo salvaguardar el lugar de los hechos para evitar la destrucción de la evidencia, además de estar capacitados para solicitar primeros auxilios y apoyos oficiales.</p>
                     </div>
                 </div>
+
+
+
             </div>
             
             
         </div>
+        <div class="img-1">
+                <img src="<?=base_url()?>includes/img/panase/1.png" class="img-responsive img-centered" alt="">
+            </div>
+            
     </section>
 
 
-    <section id="valores" class="bg-gray">
-        <div class="container-fluid">
+    <section id="valores1" class="bg-gray">
+        <div class="container">
             <div class="row text-center">
-                <div class="col-md-5 col-md-offset-1">
+                <div class="col-md-6">
                     <h1><b>Misión</b></h1>
                     <p>“Somos una empresa de seguridad privada que busca lograr la tranquilidad del cliente a través de una atención personalizada, caracterizada por su dinamismo y solución acertada a sus necesidades, tanto a nivel preventivo como correctivo.”</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <h1><b>Visión</b></h1>
                     <p>“Somos una empresa de seguridad privada que busca lograr la tranquilidad del cliente a través de una atención personalizada, caracterizada por su dinamismo y solución acertada a sus necesidades, tanto a nivel preventivo como correctivo.”</p>
                 </div>
@@ -189,95 +199,122 @@
 
         <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/comandante1.jpg')">
         <div class="container">
+
+           <div class="space-1">
+                <center>
+                <p></p>
+                <br>
+               "Personal altamente capacitado y entrenado para responder prudente e inteligentemente al resguardar la seguridad de las personas"
+                 
+
+                </center>   
+           </div>
+        </div>
+    </section>
+
+  
+
+
+    
+
+<section id="valores" class="bg-light-gray">
+        <div class="container">
             <div class="row">
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                  <img data-src="holder.js/100%x200" alt="100%x200" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDIiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEyMSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjE1cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L3N2Zz4=" style="height: 200px; width: 100%; display: block;">
-                  <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <h2>Valores</h2>
+                <div class="col-lg-12 text-center">
+                    <h2>VALORES</h2>
                     <hr class="colored">
+                    
                 </div>
             </div>
-            <div class="row content-row">
-                <div class="col-md-5">
-                    <div class="pricing-item featured-first">
-                        <h3>Responsabilidad</h3>
-                        <hr class="colored">
-                        <p>Conocer la importancia e implicación de sus funciones, respondiendo ante sus aciertos y errores, impulsando y contribuyendo con la cadena de actividades que permita construir  el servicio que ofrece la empresa.</p>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/res.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>RESPONSABILIDAD</h4>
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <div class="pricing-item featured-last">
-                        <h3>Dirección</h3>
-                        <hr class="colored">
-                        <p>De vital importancia para garantizar la seguridad de los clientes, inmuebles o personas, y por ende cumplir satisfactoriamente con el servicio requerido, que el personal reflexione sobre la información que tiene acceso y su debido uso, absteniéndose de divulgarla, hecho que podría generar potenciales situaciones de riesgo.</p>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/v2.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>DIRECCIÓN</h4>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="pricing-item featured-first">
-                        <h3>Puntualidad</h3>
-                        <hr class="colored">
-                        <p>Que las funciones propias de cada persona en la empresa, sean cumplidas en el momento adecuado y necesario para integrar la cadena de servicio al cliente. Prestando a cada una el grado de importancia que le corresponde.</p>
-                       
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/v3.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PUNTUALIDAD</h4>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="pricing-item featured-last">
-                        <h3>Lealtad</h3>
-                        <hr class="colored">
-                        <p>Corresponder ante la responsabilidad y confianza que nos son otorgados, cumpliendo ante el compromiso asumido ante la empresa, estableciendo con ello una relación de reciprocidad y certidumbre.</p>
-                       
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/v4.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>LEALTAD</h4>
                     </div>
                 </div>
-                
-                <div class="col-md-7">
-                    <div class="pricing-item featured-first">
-                        <h3>Proactividad</h3>
-                        <hr class="colored">
-                        <p>Responder ante posibles contingencias eligiendo la mejor opción y aportar soluciones en la medida de lo posible. Proponer acciones que puedan mejorar el desempeño propio, grupal y de la empresa. Sin invadir otras áreas de responsabilidad o implementar cambios sin consulta previa ante el jefe inmediato.</p>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/v5.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PROACTIVIDAD</h4>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="pricing-item featured-last">
-                        <h3>Profesionalismo</h3>
-                        <hr class="colored">
-                        <p>Que el desempeño mostrado por cada integrante de PANASE se encuentre dirigido a la eficiencia, con una actitud que vaya acorde a lo esperado y que se distinga por alejarse de conflictos o desviaciones dañinas para un clima laboral óptimo.</p>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modalw">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="<?=base_url()?>includes/img/panase/v6.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>PROFESIONALISMO</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  
+
+
+
+
+
+
 
 
     <section id="personal" class="services">
@@ -294,7 +331,7 @@
             <div class="row nuestro_personal">
                 <center>  
                 <div class="col-lg-3">
-                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/alfa2T.jpg" alt="Generic placeholder image" style="width: 160px; height: 160px;">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/alfa2T.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>ALFA</h3>
                   <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".alfa">Conoce más »</button></p>
@@ -305,7 +342,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="row-modal">
-                          <div class="row">
+                          <div class="row personal">
                               
                               <div class="col-md-7">
                                 <p>
@@ -336,8 +373,8 @@
                                     <b>Recomendado para escuelas, residenciales, empresas.</b>
                                 </p>
                               </div>
-                              <div class="col-md-5">
-                                  <img src="<?=base_url()?>includes/img/panase/alfa2.jpg" alt="alfa" class="img100">
+                              <div class="col-md-5 img100">
+                                  <img src="<?=base_url()?>includes/img/panase/alfa2.jpg" alt="alfa" >
                               </div>
                           </div>
                       </div>
@@ -348,7 +385,7 @@
 
 
                 <div class="col-lg-3">
-                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/beta2t.jpg" alt="Generic placeholder image" style="width: 160px; height: 160px;">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/beta2t.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>BETA</h3>
                   <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".beta">Conoce más »</button></p>
@@ -359,7 +396,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="row-modal">
-                          <div class="row">
+                          <div class="row personal">
                               
                               <div class="col-md-7">
                                 <p>
@@ -367,30 +404,22 @@
                                     <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
                                     <br>
                                      <ul class="text-left">
-                                         <li>Entrenados para prevenir y evitar riesgos.</li>
-                                         <li>Equipados con gas pimienta y PR-24.</li>
-                                         <li>Puede ser contratado en turnos de 24 o 12 horas.</li>
-                                         <li>Su uniforme es totalmente identificable como guardia de seguridad, pero al mismo tiempo es afable y ligero.</li>
-                                         <li>Tiene conocimiento en Defensa Personal</li>
+                                        <li>Equipados con gas pimienta y PR-24.</li>
+                                        <li>Espcialistas en el control de accesos y detección de riesgos.</li>
+                                        <li>Puede ser contratado en turnos de 24 o 12 horas.</li>
+                                        <li>Este uniforme es más audaz</li>
+                                        <li>Cuentan con Acondicionamiento físico</li>
+                                        <li>Control de Centro de monitoreo</li>
+                                        <li>Control y manejo de eventos especiales</li>
+                                        <li>Brigadas de evacuación</li>
+                                        <li>Manejo y evacuación en la llamada de extorsión y amenaza de bomba: apoyo a las autoridades en la localización y acordonado de la zona</li>
+                                        
                                      </ul>
-                            
-                                    <b>El elemento tiene una especialidad en:</b>
-                                     
-                                    <ul class="text-left">
-                                        <li>Control de accesos</li>
-                                        <li>Rondines perimetrales</li>
-                                        <li>Atención al usuario</li>
-                                        <li>Primeros Auxilios</li>
-                                        <li>Conato de Incendios</li>
-                                        <li>Brigadas de evacuación en emergencias</li>
-                                        <li>Manejo en la llamada de extorsión y amenaza de bomba</li>
-                                    </ul>
-
-                                    <b>Recomendado para escuelas, residenciales, empresas.</b>
+                        
                                 </p>
                               </div>
-                              <div class="col-md-5">
-                                  <img src="<?=base_url()?>includes/img/panase/beta2.jpg" alt="alfa" class="img100">
+                              <div class="col-md-5 img100">
+                                  <img src="<?=base_url()?>includes/img/panase/beta2.jpg" alt="alfa">
                               </div>
                           </div>
                       </div>
@@ -403,7 +432,7 @@
 
 
                 <div class="col-lg-3">
-                  <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 160px; height: 160px;">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/gama2t.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>GAMA</h3>
                  <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".gama">Conoce más »</button></p>
@@ -413,7 +442,47 @@
                 <div class="modal fade gama" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      ...
+                      <div class="row personal">
+                              
+                              <div class="col-md-7">
+                                <p>
+                                    <h2>GAMA</h2>
+                                    <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
+                                    <br>
+                                     <ul class="text-left">
+                                         <li>Son elementos de 12 a 24 hrs.</li>
+                                         <li>Control de entradas</li>
+                                         <li>Rondines</li>
+                                         <li>RCP</li>
+                                     </ul>
+                            
+                                    <b>Manejo de brigadas de emergencia:</b>
+                                     
+                                    <ul class="text-left">
+                                        <li>Búsqueda y rescate</li>
+                                        <li>Evacuación</li>
+                                        <li>Combate de incendios</li>
+                                        <li>Primeros auxilios</li>
+                                    </ul>
+                                        <p>Guarda espaldas<br>
+                                        Control por medio de radio operación
+                                        <br>
+                                        Control por medio de radio operación
+                                        <br>
+                                        Conocimiento en Defensa Personal
+                                        <br>
+                                        Atención al usuario
+                                        <br>
+                                        Gas pimienta
+                                        <br>
+                                        Manejo y evacuación en la llamada de extorsión y amenaza de bomba</p>
+                                  
+                                </p>
+                              </div>
+                              <div class="col-md-5 img100">
+                                  <img src="<?=base_url()?>includes/img/panase/gama2.jpg" alt="alfa" >
+                              </div>
+                          </div>
                     </div>
                   </div>
                 </div>
@@ -422,8 +491,8 @@
 
 
                 <div class="col-lg-3">
-                  <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 160px; height: 160px;">
-                  <h3>CUSTODIAS</h3>
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/custodiost.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
+                  <h3>CUSTODIOS</h3>
                   <p></p>
                   <p><button class="btn btn-default" data-toggle="modal" data-target=".custodia">Conoce más »</button></p>
                 </div>
@@ -432,7 +501,19 @@
                 <div class="modal fade custodia" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      ...
+                      <div class="row personal">
+                              
+                              <div class="col-md-7 personal">
+                                <p>
+                                    <h2>CUSTODIOS</h2>
+                                    <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
+                                    <p>Nuestros custodios a bordo cuentan con el perfil del equipo gamma, su función es custodiar y  dar seguridad en el transporte. Preparados para brindar protección en el traslado vehicular de capitales, equipados para mantener una comunicación constante, entrenados para ubicar con anticipación al trasgresor y reaccionar asertivamente.</p>
+                                </p>
+                              </div>
+                              <div class="col-md-5 img100">
+                                  <img src="<?=base_url()?>includes/img/panase/custodios.jpg" alt="alfa">
+                              </div>
+                          </div>
                     </div>
                   </div>
                 </div>
@@ -444,20 +525,19 @@
 
             <div class="row text-center">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h3>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad</h3>
+                    <b><h3>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad</h3></b>
                 </div>
             </div>
 
 
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <h3>Estudios de vulnerabilidad y análisis de riesgo</h3>
-                    <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
-                    <p>Se lleva a cabo por personal certificado en la materia. </p>
-                </div>
-            </div>
+            
      
         </div>
+    </section>
+
+    <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/bg1.jpg')">
+        <div class='space-1'></div>
+
     </section>
 
     <section id="clientes" class="bg-gray">
@@ -472,6 +552,8 @@
                 Templos</p>
         </div>
     </section>
+
+
 
 <!--     <section class="portfolio-carousel">
         <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-1.jpg')">
@@ -564,6 +646,21 @@
         </div>
     </section>
 
+
+     <section id="servicios" class="">
+        <div class="container text-center">
+            <h2>SERVICIOS ESPECIALES</h2>
+            <hr class="colored">
+           <div class="row text-center">
+                <div class="col-lg-12">
+                    <h3>Estudios de vulnerabilidad y análisis de riesgo</h3>
+                    <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
+                    <p>Se lleva a cabo por personal certificado en la materia. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="consejos" class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/cn.jpg')">
         <div class="container">
             <div class="row text-center">
@@ -628,7 +725,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contacto">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -682,7 +779,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
             </div>
         </div>
     </section>
-    <div id="map_canvas" style="width:100%; height:400px;"></div>
+    <div id="map_canvas" style="width:100%; height:600px;"></div>
  
 
     <footer class="footer" style="background-image: url('<?=base_url()?>includes/img/panase/foo.jpg')">
@@ -713,6 +810,8 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                         <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
                         </li>
                     </ul>
+                    <br>
+                    <a href="http://www.panamericanadeseguridad.com:2095/">INTRANET</a>
                 </div>
             </div>
             <div class="row copyright">
