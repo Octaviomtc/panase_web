@@ -25,7 +25,15 @@
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
-      }
+    
+       var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(19.455254, -99.217123),
+      map: map,
+      title: 'PANASE!'
+        });
+
+       }
+       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
     <meta charset="utf-8">
@@ -37,6 +45,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="<?=base_url()?>includes/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?=base_url()?>includes/css/thumbnail-gallery.css" rel="stylesheet" type="text/css">
 
     <!-- Retina.js - Load first for faster HQ mobile images. -->
 
@@ -66,7 +75,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/demo.css" />
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/common.css" />
         <link rel="stylesheet" type="text/css" href="<?=base_url()?>includes/css/style.css" />
-        <link id="changeable-colors" rel="stylesheet" href="<?=base_url()?>includes/css/vitality-red.css">
+        <link id="changeable-colors" rel="stylesheet" href="<?=base_url()?>includes/css/sty.css">
 
     <!-- IE8 support for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -231,7 +240,7 @@
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                Conocer la importancia e implicación de sus funciones, respondiendo ante sus aciertos y errores, impulsando y contribuyendo con la cadena de actividades que permita construir  el servicio que ofrece la empresa.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/res.jpg" class="img-responsive" alt="">
@@ -244,20 +253,20 @@
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                De vital importancia para garantizar la seguridad de los clientes, inmuebles o personas, y por ende cumplir satisfactoriamente con el servicio requerido, que el personal reflexione sobre la información que tiene acceso y su debido uso, absteniéndose de divulgarla, hecho que podría generar potenciales situaciones de riesgo.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/v2.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>DIRECCIÓN</h4>
+                        <h4>DISCRECIÓN</h4>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                Que las funciones propias de cada persona en la empresa, sean cumplidas en el momento adecuado y necesario para integrar la cadena de servicio al cliente. Prestando a cada una el grado de importancia que le corresponde.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/v3.jpg" class="img-responsive" alt="">
@@ -270,7 +279,7 @@
                     <a href="#portfolioModal4" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                Corresponder ante la responsabilidad y confianza que nos son otorgados, cumpliendo ante el compromiso asumido ante la empresa, estableciendo con ello una relación de reciprocidad y certidumbre.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/v4.jpg" class="img-responsive" alt="">
@@ -283,7 +292,7 @@
                     <a href="#portfolioModal5" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                Responder ante posibles contingencias eligiendo la mejor opción y aportar soluciones en la medida de lo posible. Proponer acciones que puedan mejorar el desempeño propio, grupal y de la empresa. Sin invadir otras áreas de responsabilidad o implementar cambios sin consulta previa ante el jefe inmediato.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/v5.jpg" class="img-responsive" alt="">
@@ -296,7 +305,7 @@
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modalw">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                                Que el desempeño mostrado por cada integrante de PANASE se encuentre dirigido a la eficiencia, con una actitud que vaya acorde a lo esperado y que se distinga por alejarse de conflictos o desviaciones dañinas para un clima laboral óptimo.
                             </div>
                         </div>
                         <img src="<?=base_url()?>includes/img/panase/v6.jpg" class="img-responsive" alt="">
@@ -371,6 +380,8 @@
                                     </ul>
 
                                     <b>Recomendado para escuelas, residenciales, empresas.</b>
+                                    <br>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
@@ -415,7 +426,7 @@
                                         <li>Manejo y evacuación en la llamada de extorsión y amenaza de bomba: apoyo a las autoridades en la localización y acordonado de la zona</li>
                                         
                                      </ul>
-                        
+                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
@@ -476,12 +487,14 @@
                                         Gas pimienta
                                         <br>
                                         Manejo y evacuación en la llamada de extorsión y amenaza de bomba</p>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
                                   
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
                                   <img src="<?=base_url()?>includes/img/panase/gama2.jpg" alt="alfa" >
                               </div>
+
                           </div>
                     </div>
                   </div>
@@ -509,6 +522,7 @@
                                     <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
                                     <p>Nuestros custodios a bordo cuentan con el perfil del equipo gamma, su función es custodiar y  dar seguridad en el transporte. Preparados para brindar protección en el traslado vehicular de capitales, equipados para mantener una comunicación constante, entrenados para ubicar con anticipación al trasgresor y reaccionar asertivamente.</p>
                                 </p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
                               </div>
                               <div class="col-md-5 img100">
                                   <img src="<?=base_url()?>includes/img/panase/custodios.jpg" alt="alfa">
@@ -550,85 +564,60 @@
                 Penales en construcción, 
                 Desarrolladores de vivienda, 
                 Templos</p>
+
+
+            
+            <div class="row">
+
+            <hr>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep2.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep3.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep4.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep5.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep6.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep7.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                <a class="thumbnail">
+                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep8.jpg" alt="">
+                </a>
+            </div>
+    
+        </div>
+
+
+
         </div>
     </section>
 
-
-
-<!--     <section class="portfolio-carousel">
-        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-1.jpg')">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-md-push-8">
-                        <div class="project-details">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
-                            <span class="project-name">Project Name</span>
-                            <span class="project-description">Branding, Website Design</span>
-                            <hr class="colored">
-                            <a href="#portfolioModal1" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-pull-4 hidden-xs">
-                        <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-2.jpg')">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-md-push-8">
-                        <div class="project-details">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
-                            <span class="project-name">Project Name</span>
-                            <span class="project-description">Branding, Website Design</span>
-                            <hr class="colored">
-                            <a href="#portfolioModal2" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-pull-4 hidden-xs">
-                        <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-3.jpg')">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-md-push-8">
-                        <div class="project-details">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive client-logo" alt="">
-                            <span class="project-name">Project Name</span>
-                            <span class="project-description">Branding, Website Design</span>
-                            <hr class="colored">
-                            <a href="#portfolioModal3" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-pull-4 hidden-xs">
-                        <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive portfolio-image" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-4.jpg')">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-md-push-8">
-                        <div class="project-details">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive client-logo" alt="">
-                            <span class="project-name">Project Name</span>
-                            <span class="project-description">Branding, Website Design</span>
-                            <hr class="colored">
-                            <a href="#portfolioModal4" data-toggle="modal" class="btn btn-outline-light">View Details <i class="fa fa-long-arrow-right fa-fw"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-md-pull-4 hidden-xs">
-                        <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive portfolio-image" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="testimonials">
         <div class="container">
@@ -651,13 +640,66 @@
         <div class="container text-center">
             <h2>SERVICIOS ESPECIALES</h2>
             <hr class="colored">
-           <div class="row text-center">
-                <div class="col-lg-12">
-                    <h3>Estudios de vulnerabilidad y análisis de riesgo</h3>
+           <div class="row text-center espec">
+                <div class="col-md-6 col-md-offset-3">
+                    <h3><b>Investigaciones Especiales Kappa</b></h3>
+           
+                    
+                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/investigaciones.png" alt="">
+                 
+                </div>
+
+                <div class="col-md-8 col-md-offset-2">
+                    <p>Utilizamos diferentes técnicas, apropiadas para cada situación; grafología, instrumento detector de honestidad, entrevista especializada, detectives y baterías de pruebas psicológicas.</p>
+                   
+                    
+                </div>
+              
+            
+            </div>
+            <div class="row text-center espec">
+                <div class="col-md-12"> <h3><b>Kappa Security Mobile</b></h3></div>
+                 <div class="col-md-5 col-md-offset-2">
+                   
+                    <p>Si necesitas trasladarte tú o tu familia con absoluta seguridad bajo el cuidado de profesionales puedes contratar este servicio por hora o por destino. <br> El chofer está entrenado en técnicas ofensivas y defensivas, (opcionalmente puedes lleavr a un custodio adicional). <br> Utilizamos automóviles disuasivos, con y sin logotipo de seguridad. <br> <b><a href="#contacto">Solicita tu servicio con al menos 24 horas de anticpación.</a></b></p>
+                
+                </div>
+                <div class="col-md-3">
+                    
+                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/kms_red.png" alt="">
+                        
+                </div>
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row text-center espec">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3><b>Seguridad en eventos</b></h3>
+                    <p>Contamos con experiencia en cobertura de eventos masivos; tenemos el equipo necesario y el personal capacitado en control de accesos, evacuaciones de emergencia y primeros auxilios.</p>
+                 </div>
+                 <div class="col-md-8 col-md-offset-2">
+                    <a class="thumbnail">
+                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/bg21.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3><b>Estudios de vulnerabilidad y análisis de riesgo</b></h3>
                     <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
                     <p>Se lleva a cabo por personal certificado en la materia. </p>
                 </div>
+
+                
+                <div class="img-cont-100">
+                    <center>
+                    <img src="<?=base_url()?>includes/img/panase/bg22.png" alt=""></center>
+                </div>
+
+
+
             </div>
+
+            
         </div>
     </section>
 
@@ -728,14 +770,11 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
     <section id="contacto">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-md-8 col-md-offset-2 text-center">
                     <h2>Contáctanos</h2>
                     <hr class="colored">
                     <p>Déjanos tus datos y un representante se pondrá en contacto contigo.</p>
-                </div>
-            </div>
-            <div class="row content-row">
-                <div class="col-lg-8 col-lg-offset-2">
+          
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -776,8 +815,13 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
 
                     </form>
                 </div>
+               
             </div>
         </div>
+         <div class="img-cont-80">
+                    <center>
+                    <img src="<?=base_url()?>includes/img/panase/mail.png" alt=""></center>
+                </div>
     </section>
     <div id="map_canvas" style="width:100%; height:600px;"></div>
  
@@ -816,166 +860,14 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
             </div>
             <div class="row copyright">
                 <div class="col-lg-12">
-                    <p class="small">&copy; 2014 COREDEV & PANAMERICANA DE SEGURIDAD PRIVADA, S.A. DE C.V</p>
+                    <p class="small"><a href="http://www.coredev.io">DESARROLLADO POR OCTAVIO MARTINEZ - COREDEV.IO</a></p>
+                    <p class="small">&copy; 2014 PANAMERICANA DE SEGURIDAD PRIVADA, S.A. DE C.V</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-
-    <!-- Example Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-1.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Example Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-2.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Example Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-3.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="<?=base_url()?>includes/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Example Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('<?=base_url()?>includes/img/portfolio/bg-4.jpg')">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <img src="<?=base_url()?>includes/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
-                            <h2>Project Title</h2>
-                            <hr class="colored">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <img src="<?=base_url()?>includes/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
-                        </div>
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+   
 
     <!-- Core Scripts -->
     <script src="<?=base_url()?>includes/js/jquery-1.10.2.js"></script>
