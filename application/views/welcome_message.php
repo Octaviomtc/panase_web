@@ -184,11 +184,24 @@
             
             
         </div>
-        <div class="img-1">
+      <!--   <div class="img-1">
                 <img src="<?=base_url()?>includes/img/panase/1.png" class="img-responsive img-centered" alt="">
-            </div>
+            </div> -->
             
     </section>
+
+
+    <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/bg223.jpg')">
+        <div class="container">
+
+           <div class="space-1">
+               
+           </div>
+        </div>
+    </section>
+
+
+
 
 
     <section id="valores1" class="bg-gray">
@@ -571,44 +584,102 @@
 
             <hr>
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep1">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep1.jpg" alt="">
                 </a>
             </div>
+
+
+            <div class="modal fade ep1" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/empresas23.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep2">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep2.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep2" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/escuela.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep3">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep3.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep3" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/el.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep4">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep4.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep4" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/dg.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep5">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep5.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep5" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/ds.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep6">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep6.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep6" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/cur.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep7">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep7.jpg" alt="">
                 </a>
             </div>
+            <div class="modal fade ep7" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/ca.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
+            </div>
+
+
             <div class="col-lg-3 col-md-4 col-xs-12 thumb">
-                <a class="thumbnail">
+                <a class="thumbnail" data-toggle="modal" data-target=".ep8">
                     <img class="img-responsive" src="<?=base_url()?>includes/img/panase/ep8.jpg" alt="">
                 </a>
+            </div>
+            <div class="modal fade ep8" tabindex="-1" role="dialog" aria-labelledby="ep1" aria-hidden="true">
+                 <div class="modal-dialog">
+                    <img src="<?=base_url()?>includes/img/panase/eqt.jpg" alt="alfa" class="img-responsive img-centered" >
+                </div>
             </div>
     
         </div>
@@ -636,7 +707,7 @@
     </section>
 
 
-     <section id="servicios" class="">
+     <section id="servicios" class="bg-gray">
         <div class="container text-center">
             <h2>SERVICIOS ESPECIALES</h2>
             <hr class="colored">
