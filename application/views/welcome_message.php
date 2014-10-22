@@ -203,10 +203,7 @@
 
     /* For tablets & smart phones */
     @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
+      
       .container {
       }
     }
