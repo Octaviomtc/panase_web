@@ -84,6 +84,57 @@
 
 
     <![endif]-->
+     <style type="text/css">
+ul#social {
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    top: 90px;
+    left: 0px;
+    list-style: none;
+    z-index:9999;
+}
+ul#social li {
+    width: 100px;
+}
+ul#social li a {
+    display: block;
+    margin-left: -2px;
+    width: 100px;
+    height: 70px;   
+    background-color:#fff;
+    background-repeat:no-repeat;
+    background-position:center center;
+    border:1px solid #AFAFAF;
+    -moz-border-radius:0px 10px 10px 0px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -khtml-border-bottom-right-radius: 10px;
+    -khtml-border-top-right-radius: 10px;
+    -moz-box-shadow: 0px 4px 3px #000;
+    -webkit-box-shadow: 0px 4px 3px #000;
+}
+ul#social .twitter a{
+     background:#0F96C6 url(http://3.bp.blogspot.com/-1wb-O4GG6DQ/UPFOe03M-lI/AAAAAAAAA4g/1015-y7FaYU/s1600/Twitter.png)no-repeat;
+background-position:center center;
+}
+ul#social .googleplus a      {
+    background:#D73D27 url(http://3.bp.blogspot.com/-1mYMKQENXdI/UPFOeK31VzI/AAAAAAAAA4k/w2Qk48tpleQ/s1600/GOOGLE+PLus.png)no-repeat;
+background-position:center center;
+}
+ul#social .facebook a      {
+    background:#1A4B97 url(http://1.bp.blogspot.com/-3M1F3Y29Yoc/UPFOeAAUFvI/AAAAAAAAA4c/ALvfOPDwJ-g/s1600/Facebook.png)no-repeat;
+background-position:center center;
+}
+ul#social .rss a      {
+    background:#FAAE17 url(http://4.bp.blogspot.com/-twR0g7wotpE/UPFOfFtFOuI/AAAAAAAAA4o/uJMUf9hjRco/s1600/rss.png)no-repeat;
+background-position:center center;
+}
+ul#social .pinterest a   {
+    background:#963336 url(http://2.bp.blogspot.com/-xgOrG4ysqyM/UPFOeKFKMtI/AAAAAAAAA4Y/i_jnKpHsK24/s1600/Pinterest.png)no-repeat;
+background-position:center center;
+}
+</style>
     <style>
     
 
@@ -1123,46 +1174,75 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                     <h2>Contáctanos</h2>
                     <hr class="colored">
                     <p>Déjanos tus datos y un representante se pondrá en contacto contigo.</p>
-          
-                    <form name="sentMessage" id="contactForm"  action='<?=base_url()?>index.php/welcome/send_mail' method="POST">
-                        <div class="row control-group">
+                    
+
+
+
+
+
+                                    <?php // Change the css classes to suit your needs
+
+            $attributes = array('class' => '', 'id' => '');
+            echo form_open('welcome', $attributes); ?>
+
+    <div class="col-md-12">
+            <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nombre</label>
-                                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" id="name" required data-validation-required-message="Por favor ingresa tu nombre." value="<?php echo set_value('nombre'); ?>" />
                                 <p class="help-block text-danger"></p>
                             </div>
+                        </div>
+            <div class="row control-group">
+                        
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Dirección de correo electrónico</label>
-                                <input type="text" class="form-control" placeholder="Dirección" id="email" required data-validation-required-message="Ingresa una dirección de correo electrónico.">
+                                <input type="text" class="form-control" name="mail" placeholder="Mail" id="email" required data-validation-required-message="Ingresa una dirección de correo electrónico.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Télefono</label>
-                                <input type="tel" class="form-control" placeholder="Télefono" id="phone" required data-validation-required-message="Ingresa tu telefono.">
+                                <input type="tel" class="form-control" placeholder="Télefono" name="tel" id="phone" required data-validation-required-message="Ingresa tu telefono.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Asunto</label>
+                                <input type="asunto" class="form-control" placeholder="Asunto" name="asunto" id="asunto" required data-validation-required-message="Ingresa en asunto.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Mensaje</label>
-                                <textarea rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Escribr un mensaje."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Mensaje" name="mensaje" id="message" required data-validation-required-message="Escribr un mensaje."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-outline-dark">Enviar</button>
-                            </div>
-                        </div>
+
+              <p>
+
+                      <?php
+                        $attributes = array('class' => 'class="btn btn-outline-dark"');
+                        echo form_submit( 'submit', 'Enviar', $attributes['class']); ?>
+              </p>
 
 
-                    </form>
+      </div>
+
+
+
+
+
+<?php echo form_close(); ?>
+
+
                 </div>
                
             </div>
@@ -1249,7 +1329,30 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
       });
     });
   </script>
-
+  <script type='text/javascript'>
+$(function () {
+    $('#social a').stop().animate({
+        'marginLeft': '-85px'
+    }, 1000);
+    $('#social > li').hover(
+        function () {
+            $('a', $(this)).stop().animate({
+                'marginLeft': '-2px'
+            }, 200);
+        },
+        function () {
+            $('a', $(this)).stop().animate({
+                'marginLeft': '-85px'
+            }, 200);
+        }
+    );
+});
+</script>
+<ul id='social'>
+ <li class='twitter'><a href='#' title='Twitter'></a></li>
+ <li class='googleplus'><a href='#' title='Google Plus'></a></li>
+ <li class='facebook'><a href='#' title='Facebook'></a></li>
+</ul>
 </body>
 
 </html>

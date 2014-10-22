@@ -277,7 +277,7 @@
                     <p>En breve un representante se pondrá en contacto contigo.</p>
           
             
-                    <button type="submit" class="btn btn-outline-dark">REGRESAR</button>
+                    <a href="<?=base_url()?>index.php/" class="btn btn-outline-dark">REGRESAR</a>
                 </div>
                
             </div>
