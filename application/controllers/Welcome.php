@@ -48,6 +48,40 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('welcome_message');
 	}
+
+	 public function send_mail()
+    {
+        //cargamos la libreria email de ci
+        $this->load->library("email");
+        $this->load->helper('url');
+ 
+        //configuracion para gmail
+        $configGmail = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.gmail.com',
+            'smtp_port' => 465,
+            'smtp_user' => 'panase.contacto@gmail.com',
+            'smtp_pass' => 'p@n01@s3',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'newline' => "\r\n"
+        );    
+ 
+        //cargamos la configuración para enviar con gmail
+        $this->email->initialize($configGmail);
+ 
+        $this->email->from('Contacto');
+        $this->email->to("octavio150@gmail.com");
+        $this->email->subject('Prueba');
+        $this->email->message('Prueba');
+        $this->email->send();
+
+		$this->load->view('mail');
+    }
+ 
+   
+
+
 }
 
 /* End of file welcome.php */

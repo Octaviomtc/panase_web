@@ -84,6 +84,151 @@
 
 
     <![endif]-->
+    <style>
+    
+
+
+    #slides {
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(includes/img/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(includes/img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  </style>
+  <!-- End SlidesJS Optional-->
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+  <style>
+    #slides {
+      display: none
+    }
+
+    .container {
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+      }
+    }
+  </style>
 
 
 </head>
@@ -698,12 +843,21 @@
                     <p>Registro Federal de contribuyentes:  PSP 010914  HG2<br>
                         Registro del I.M.S.S.:  C41 4413910-0<br>
                         Capacitación y adiestramiento:  FOLIO 311/87449</p>
-                         <img src="<?=base_url()?>includes/img/panase/cer.jpg" class="img-responsive img-centered" alt="">
-
-                    
+                 
                 </div>
             </div>
         </div>
+
+        <div class="container slides-img" >
+            <div id="slides" >
+              <img src="<?=base_url()?>includes/img/panase/cer.jpg" class="img-responsive img-centered" alt="">
+              <img src="<?=base_url()?>includes/img/panase/dc1.jpg" class="img-responsive img-centered" alt="">
+              <img src="<?=base_url()?>includes/img/panase/dc2.jpg" class="img-responsive img-centered" alt="">
+            </div>
+          </div>        
+
+
+
     </section>
 
 
@@ -711,64 +865,191 @@
         <div class="container text-center">
             <h2>SERVICIOS ESPECIALES</h2>
             <hr class="colored">
-           <div class="row text-center espec">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3><b>Investigaciones Especiales Kappa</b></h3>
-           
-                    
-                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/investigaciones.png" alt="">
-                 
-                </div>
 
-                <div class="col-md-8 col-md-offset-2">
-                    <p>Utilizamos diferentes técnicas, apropiadas para cada situación; grafología, instrumento detector de honestidad, entrevista especializada, detectives y baterías de pruebas psicológicas.</p>
-                   
-                    
-                </div>
-              
             
-            </div>
-            <div class="row text-center espec">
-                <div class="col-md-12"> <h3><b>Kappa Security Mobile</b></h3></div>
-                 <div class="col-md-5 col-md-offset-2">
-                   
-                    <p>Si necesitas trasladarte tú o tu familia con absoluta seguridad bajo el cuidado de profesionales puedes contratar este servicio por hora o por destino. <br> El chofer está entrenado en técnicas ofensivas y defensivas, (opcionalmente puedes lleavr a un custodio adicional). <br> Utilizamos automóviles disuasivos, con y sin logotipo de seguridad. <br> <b><a href="#contacto">Solicita tu servicio con al menos 24 horas de anticpación.</a></b></p>
-                
-                </div>
-                <div class="col-md-3">
-                    
-                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/kms_red.png" alt="">
-                        
-                </div>
-                <div class="col-md-12"></div>
-            </div>
-            <div class="row text-center espec">
-                <div class="col-md-8 col-md-offset-2">
-                    <h3><b>Seguridad en eventos</b></h3>
-                    <p>Contamos con experiencia en cobertura de eventos masivos; tenemos el equipo necesario y el personal capacitado en control de accesos, evacuaciones de emergencia y primeros auxilios.</p>
-                 </div>
-                 <div class="col-md-8 col-md-offset-2">
-                    <a class="thumbnail">
-                        <img class="img-responsive" src="<?=base_url()?>includes/img/panase/bg21.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-8 col-md-offset-2">
-                    <h3><b>Estudios de vulnerabilidad y análisis de riesgo</b></h3>
-                    <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
-                    <p>Se lleva a cabo por personal certificado en la materia. </p>
+
+             <div class="row nuestro_personal">
+                <center>  
+                <div class="col-lg-3">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot1.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
+                  <h3>INVESTIGACIONES ESPECIALES KAPPA</h3>
+                  <p></p>
+                  <p><button class="btn btn-default" data-toggle="modal" data-target=".inv1">Conoce más »</button></p>
                 </div>
 
+
+                <div class="modal fade inv1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="row-modal">
+                          <div class="row personal">
+                              
+                              <div class="col-md-12">
+                                <div class="row text-center espec">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <h3><b>Investigaciones Especiales Kappa</b></h3>
+                                   
+                                            
+                                                <img class="img-responsive" src="<?=base_url()?>includes/img/panase/investigaciones.png" alt="">
+                                         
+                                        </div>
+
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <p>Utilizamos diferentes técnicas, apropiadas para cada situación; grafología, instrumento detector de honestidad, entrevista especializada, detectives y baterías de pruebas psicológicas.</p>
+                                           
+                                            
+                                        </div>
+                                      
+                                    
+                                    </div>
+
+                                    <br>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                </p>
+                              </div>
+                          
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col-lg-3">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot2.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
+                  <h3>KAPPA SECURITY MOBILE</h3>
+                  <p></p>
+                  <p><button class="btn btn-default" data-toggle="modal" data-target=".kp">Conoce más »</button></p>
+                </div>
+
+
+                <div class="modal fade kp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="row-modal">
+                          <div class="row personal">
+                              
+                              <div class="col-md-12">
+                                <p>
+                                    <div class="row text-center espec">
+                                            <div class="col-md-12"> <h3><b>Kappa Security Mobile</b></h3></div>
+                                             <div class="col-md-5 col-md-offset-2">
+                                               
+                                                <p>Si necesitas trasladarte tú o tu familia con absoluta seguridad bajo el cuidado de profesionales puedes contratar este servicio por hora o por destino. <br> El chofer está entrenado en técnicas ofensivas y defensivas, (opcionalmente puedes lleavr a un custodio adicional). <br> Utilizamos automóviles disuasivos, con y sin logotipo de seguridad. <br> <b><a href="#contacto">Solicita tu servicio con al menos 24 horas de anticpación.</a></b></p>
+                                            
+                                            </div>
+                                            <div class="col-md-3">
+                                                
+                                                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/kms_red.png" alt="">
+                                                    
+                                            </div>
+                                            <div class="col-md-12"></div>
+                                        </div>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                </p>
+                              </div>
+                              
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="col-lg-3">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot3.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
+                  <h3>SEGURIDAD EN EVENTOS</h3>
+                 <p></p>
+                  <p><button class="btn btn-default" data-toggle="modal" data-target=".seg">Conoce más »</button></p>
+                </div>
+
+
+                <div class="modal fade seg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="row personal">
+                              
+                              <div class="col-md-12">
+                                <p>
+                                    
+                                
+                            <div class="row text-center espec">
+                                            <div class="col-md-8 col-md-offset-2">
+                                                <h3><b>Seguridad en eventos</b></h3>
+                                                <p>Contamos con experiencia en cobertura de eventos masivos; tenemos el equipo necesario y el personal capacitado en control de accesos, evacuaciones de emergencia y primeros auxilios.</p>
+                                             </div>
+                                             <div class="col-md-8 col-md-offset-2">
+                                                <a class="thumbnail">
+                                                    <img class="img-responsive" src="<?=base_url()?>includes/img/panase/bg21.jpg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <br><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                  
+                                </p>
+                              </div>
+                              
+                          </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3">
+                  <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot4.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
+                  <h3>Estudios de vulnerabilidad</h3>
+                  <p></p>
+                  <p><button class="btn btn-default" data-toggle="modal" data-target=".stvu">Conoce más »</button></p>
+                </div>
+
+
+                <div class="modal fade stvu" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="row personal">
+                              
+                              <div class="col-md-12">
+                                <p>
+                                   <div class="row text-center">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <h3><b>Estudios de vulnerabilidad y análisis de riesgo</b></h3>
+                                            <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
+                                            <p>Se lleva a cabo por personal certificado en la materia. </p>
+                                        </div>
+
                 
+                                        <div class="img-cont-100">
+                                            <center>
+                                            <img src="<?=base_url()?>includes/img/panase/bg22.png" alt=""></center>
+                                        </div>
+
+
+
+                                </div>
+                                </p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                              </div>
+                              
+                          </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                </center>
+              </div>
+
                 <div class="img-cont-100">
-                    <center>
-                    <img src="<?=base_url()?>includes/img/panase/bg22.png" alt=""></center>
-                </div>
-
-
-
-            </div>
+                                            <center>
+                                            <img src="<?=base_url()?>includes/img/panase/bg22.png" alt=""></center>
+                                        </div>
 
             
         </div>
@@ -846,32 +1127,32 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                     <hr class="colored">
                     <p>Déjanos tus datos y un representante se pondrá en contacto contigo.</p>
           
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm"  action='<?=base_url()?>index.php/welcome/send_mail' method="POST">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Nombre</label>
-                                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Por favor ingresa tu nombre.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Dirección</label>
-                                <input type="text" class="form-control" placeholder="Dirección" id="email" required data-validation-required-message="Please enter your email address.">
+                                <label>Dirección de correo electrónico</label>
+                                <input type="text" class="form-control" placeholder="Dirección" id="email" required data-validation-required-message="Ingresa una dirección de correo electrónico.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Télefono</label>
-                                <input type="tel" class="form-control" placeholder="Télefono" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <input type="tel" class="form-control" placeholder="Télefono" id="phone" required data-validation-required-message="Ingresa tu telefono.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Mensaje</label>
-                                <textarea rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Mensaje" id="message" required data-validation-required-message="Escribr un mensaje."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -938,8 +1219,6 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
         </div>
     </footer>
 
-   
-
     <!-- Core Scripts -->
     <script src="<?=base_url()?>includes/js/jquery-1.10.2.js"></script>
     <script src="<?=base_url()?>includes/js/bootstrap/bootstrap.min.js"></script>
@@ -951,14 +1230,28 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
     <script src="<?=base_url()?>includes/js/plugins/owl-carousel/owl.carousel.js"></script>
     <script src="<?=base_url()?>includes/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="<?=base_url()?>includes/js/plugins/jquery.fs.wallpaper.js"></script>
-    <script src="<?=base_url()?>includes/js/contact_me.js"></script>
+
     <script src="<?=base_url()?>includes/js/plugins/jqBootstrapValidation.js"></script>
 
     <!-- Vitality Theme Scripts -->
     <script src="<?=base_url()?>includes/js/vitality.js"></script>
-
+    <script src="<?=base_url()?>includes/js/jquery.slides.min.js"></script>
     <!-- Style Switcher Scripts - Demo Purposes Only! -->
     <script src="<?=base_url()?>includes/demo/style.switcher.js"></script>
+    <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 1028,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+  </script>
 
 </body>
 
