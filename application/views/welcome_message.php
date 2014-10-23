@@ -1259,7 +1259,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                     <img src="<?=base_url()?>includes/img/panase/mail.png" alt=""></center>
                 </div>
     </section>
-    <div id="map_canvas" style="width:100%; height:600px;"></div>
+    <div id="map_canvas" style="width:100%; height:350px;"></div>
  
 
     <footer class="footer" style="background-image: url('<?=base_url()?>includes/img/panase/foo.jpg')">
