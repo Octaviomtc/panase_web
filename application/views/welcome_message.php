@@ -85,12 +85,19 @@
 
     <![endif]-->
      <style type="text/css">
+     .foot-ico ul li a:hover{
+        color: #9c1519;
+     }
+     .poss-right{
+        text-align: right;
+        position: right;
+     }
 ul#social {
     position: fixed;
     margin: 0px;
     padding: 0px;
     top: 90px;
-    left: 0px;
+    right: -2px;
     list-style: none;
     z-index:9999;
 }
@@ -99,35 +106,31 @@ ul#social li {
 }
 ul#social li a {
     display: block;
-    margin-left: -2px;
+    margin-right: -6px;
     width: 100px;
     height: 70px;   
     background-color:#fff;
     background-repeat:no-repeat;
     background-position:center center;
-    border:1px solid #AFAFAF;
-    -moz-border-radius:0px 10px 10px 0px;
-    -webkit-border-bottom-right-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
-    -khtml-border-bottom-right-radius: 10px;
-    -khtml-border-top-right-radius: 10px;
-    -moz-box-shadow: 0px 4px 3px #000;
-    -webkit-box-shadow: 0px 4px 3px #000;
 }
 ul#social .twitter a{
-     background:#0F96C6 url(http://3.bp.blogspot.com/-1wb-O4GG6DQ/UPFOe03M-lI/AAAAAAAAA4g/1015-y7FaYU/s1600/Twitter.png)no-repeat;
+     background: url(includes/img/tw.png)no-repeat;
 background-position:center center;
 }
 ul#social .googleplus a      {
-    background:#D73D27 url(http://3.bp.blogspot.com/-1mYMKQENXdI/UPFOeK31VzI/AAAAAAAAA4k/w2Qk48tpleQ/s1600/GOOGLE+PLus.png)no-repeat;
+    background: url(includes/img/gm.png)no-repeat;
 background-position:center center;
 }
 ul#social .facebook a      {
-    background:#1A4B97 url(http://1.bp.blogspot.com/-3M1F3Y29Yoc/UPFOeAAUFvI/AAAAAAAAA4c/ALvfOPDwJ-g/s1600/Facebook.png)no-repeat;
+    background: url(includes/img/fc.png)no-repeat;
+background-position:center center;
+}
+ul#social .blog a      {
+    background: url(includes/img/bl.png)no-repeat;
 background-position:center center;
 }
 ul#social .rss a      {
-    background:#FAAE17 url(http://4.bp.blogspot.com/-twR0g7wotpE/UPFOfFtFOuI/AAAAAAAAA4o/uJMUf9hjRco/s1600/rss.png)no-repeat;
+    background: url(http://4.bp.blogspot.com/-twR0g7wotpE/UPFOfFtFOuI/AAAAAAAAA4o/uJMUf9hjRco/s1600/rss.png)no-repeat;
 background-position:center center;
 }
 ul#social .pinterest a   {
@@ -377,21 +380,21 @@ background-position:center center;
             
             
         </div>
-      <!--   <div class="img-1">
-                <img src="<?=base_url()?>includes/img/panase/1.png" class="img-responsive img-centered" alt="">
-            </div> -->
+        <div class="img-1">
+                <img src="<?=base_url()?>includes/img/panase/mj.png" class="img-responsive img-centered" alt="">
+            </div>
             
     </section>
 
 
-    <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/bg223.jpg')">
+<!--     <section class="pricing" style="background-image: url('<?=base_url()?>includes/img/panase/bg223.jpg')">
         <div class="container">
 
            <div class="space-1">
                
            </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -549,7 +552,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/alfa2T.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>ALFA</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".alfa">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".alfa"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -587,7 +590,7 @@ background-position:center center;
 
                                     <b>Recomendado para escuelas, residenciales, empresas.</b>
                                     <br>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                    <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
@@ -605,7 +608,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/beta2t.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>BETA</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".beta">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".beta"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -632,7 +635,7 @@ background-position:center center;
                                         <li>Manejo y evacuación en la llamada de extorsión y amenaza de bomba: apoyo a las autoridades en la localización y acordonado de la zona</li>
                                         
                                      </ul>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                        <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
@@ -652,7 +655,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/gama2t.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>GAMA</h3>
                  <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".gama">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".gama"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -693,7 +696,7 @@ background-position:center center;
                                         Gas pimienta
                                         <br>
                                         Manejo y evacuación en la llamada de extorsión y amenaza de bomba</p>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                        <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                   
                                 </p>
                               </div>
@@ -713,7 +716,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/custodiost.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>CUSTODIOS</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".custodia">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".custodia"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -728,7 +731,7 @@ background-position:center center;
                                     <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
                                     <p>Nuestros custodios a bordo cuentan con el perfil del equipo gamma, su función es custodiar y  dar seguridad en el transporte. Preparados para brindar protección en el traslado vehicular de capitales, equipados para mantener una comunicación constante, entrenados para ubicar con anticipación al trasgresor y reaccionar asertivamente.</p>
                                 </p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                               </div>
                               <div class="col-md-5 img100">
                                   <img src="<?=base_url()?>includes/img/panase/custodios.jpg" alt="alfa">
@@ -922,7 +925,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot1.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>INVESTIGACIONES ESPECIALES KAPPA</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".inv1">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".inv1"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -952,7 +955,7 @@ background-position:center center;
                                     </div>
 
                                     <br>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                    <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                 </p>
                               </div>
                           
@@ -968,7 +971,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot2.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>KAPPA SECURITY MOBILE</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".kp">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".kp"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -994,7 +997,7 @@ background-position:center center;
                                             </div>
                                             <div class="col-md-12"></div>
                                         </div>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                        <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                 </p>
                               </div>
                               
@@ -1012,7 +1015,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot3.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>SEGURIDAD EN EVENTOS</h3>
                  <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".seg">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".seg"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -1036,7 +1039,7 @@ background-position:center center;
                                                 </a>
                                             </div>
                                         </div>
-                                    <br><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                    <br><a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                   
                                 </p>
                               </div>
@@ -1053,7 +1056,7 @@ background-position:center center;
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot4.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
                   <h3>Estudios de vulnerabilidad</h3>
                   <p></p>
-                  <p><button class="btn btn-default" data-toggle="modal" data-target=".stvu">Conoce más »</button></p>
+                  <p><a class="" data-toggle="modal" data-target=".stvu"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
 
 
@@ -1081,7 +1084,11 @@ background-position:center center;
 
                                 </div>
                                 </p>
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> REGRESAR</button>
+                                </div>
+                              <div class="col-md-2 col-md-offset-10">
+                                <a type="button" class="poss-right" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
+
+
                               </div>
                               
                           </div>
@@ -1274,13 +1281,13 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                 </div>
             </div>
             <div class="row social">
-                <div class="col-lg-12">
+                <div class="col-lg-12 foot-ico">
                     <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        <li><a href="https://www.facebook.com/SeguridadPrivadaPanase"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                        <li><a href="https://twitter.com/SeguridadPanase"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                        <li><a href="#"><i class="fa fa-wordpress fa-fw fa-2x"></i></a>
                         </li>
                     </ul>
                     <br>
@@ -1332,7 +1339,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
   <script type='text/javascript'>
 $(function () {
     $('#social a').stop().animate({
-        'marginLeft': '-85px'
+        'marginLeft': '50px'
     }, 1000);
     $('#social > li').hover(
         function () {
@@ -1342,7 +1349,7 @@ $(function () {
         },
         function () {
             $('a', $(this)).stop().animate({
-                'marginLeft': '-85px'
+                'marginLeft': '50px'
             }, 200);
         }
     );
@@ -1351,7 +1358,8 @@ $(function () {
 <ul id='social'>
  <li class='twitter'><a href='#' title='Twitter'></a></li>
  <li class='googleplus'><a href='#' title='Google Plus'></a></li>
- <li class='facebook'><a href='#' title='Facebook'></a></li>
+ <li class='facebook'><a href='https://www.facebook.com/SeguridadPrivadaPanase' title='Facebook'></a></li>
+ <li class='blog'><a href='http://panamericanadeseguridad.com/blog' title='Blog'></a></li>
 </ul>
 </body>
 
