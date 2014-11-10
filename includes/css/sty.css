@@ -36,7 +36,7 @@ body {
 }
 
 a {
-    color: #9a171e;
+    color: #a12830;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -98,7 +98,7 @@ hr.right {
 }
 
 hr.colored {
-    border-color: #9a171e;
+    border-color: #a12830;
 }
 
 @media(min-width:768px) {
@@ -117,7 +117,7 @@ hr.colored {
 }
 
 .text-primary {
-    color: #9a171e;
+    color: #a12830;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -127,12 +127,12 @@ hr.colored {
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
     border-radius: 0;
-    color: #9a171e;
+    color: #a12830;
     background-color: #fff;
 }
 
 .navbar-default {
-    background-color: #9a171e;
+    background-color: #a12830;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -150,7 +150,7 @@ hr.colored {
 }
 
 .navbar-inverse {
-    background-color: #9a171e;
+    background-color: #a12830;
 }
 
 .navbar-default,
@@ -475,7 +475,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 50px;
     color: #fff!important;
-    background-color: #9a171e!important;
+    background-color: #a12830!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -569,7 +569,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 50px;
     color: #fff!important;
-    background-color: #9a171e!important;
+    background-color: #a12830!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -687,7 +687,7 @@ aside.cta-quote span.quote {
     font-size: 30px!important;
     line-height: 70px;
     color: #fff!important;
-    background-color: #9a171e!important;
+    background-color: #a12830!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -942,7 +942,7 @@ aside.cta-quote span.quote {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #9a171e;
+    color: #a12830;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -1001,7 +1001,7 @@ footer.footer .copyright p.small {
 .btn-outline-light:hover,
 .btn-outline-light:focus {
     outline: 0;
-    color: #9a171e;
+    color: #a12830;
     background: #fff;
 }
 
@@ -1016,10 +1016,10 @@ footer.footer .copyright p.small {
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
-    border-color: #9a171e;
+    border-color: #a12830;
     outline: 0;
     color: #fff;
-    background: #9a171e;
+    background: #a12830;
 }
 
 .btn {
@@ -1050,7 +1050,7 @@ footer.footer .copyright p.small {
 
 .btn-full-width:hover {
     color: #fff;
-    background-color: #9a171e;
+    background-color: #a12830;
 }
 
 .btn-full-width:focus {

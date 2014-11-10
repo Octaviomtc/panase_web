@@ -104,6 +104,20 @@ ul#social {
 ul#social li {
     width: 100px;
 }
+
+.fa:hover,
+.fa:focus,
+.fa:active {
+    color: #a12830;
+}
+
+
+a:hover,
+a:focus,
+a:active {
+    color: #a12830;
+}
+
 ul#social li a {
     display: block;
     margin-right: -6px;
@@ -117,6 +131,20 @@ ul#social .twitter a{
      background: url(includes/img/tw.png)no-repeat;
 background-position:center center;
 }
+
+.img-1 img{
+  margin-right: 20px;
+  margin-top: 0px;
+}
+@-moz-document url-prefix()
+ {
+   .img-1 img{
+  margin-right: 20px;
+  margin-top: -250px;
+}
+ }
+
+
 ul#social .googleplus a      {
     background: url(includes/img/gm.png)no-repeat;
 background-position:center center;
@@ -381,7 +409,7 @@ background-position:center center;
             
         </div>
         <div class="img-1">
-                <img src="<?=base_url()?>includes/img/panase/mj.png" class="img-responsive img-centered" alt="">
+                <img src="<?=base_url()?>includes/img/panase/mj.png" class="img-centered" alt="">
             </div>
             
     </section>
@@ -594,7 +622,7 @@ background-position:center center;
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
-                                  <img src="<?=base_url()?>includes/img/panase/alfa2.jpg" alt="alfa" >
+                                  <img src="<?=base_url()?>includes/img/panase/panase234.jpg" alt="alfa" >
                               </div>
                           </div>
                       </div>
@@ -621,20 +649,34 @@ background-position:center center;
                               <div class="col-md-7">
                                 <p>
                                     <h2>BETA</h2>
-                                    <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
+
+                                    <b>Elementos de seguridad entrenados en
+                                    técnicas avanzadas de protección y seguridad.</b>
                                     <br>
                                      <ul class="text-left">
-                                        <li>Equipados con gas pimienta y PR-24.</li>
-                                        <li>Espcialistas en el control de accesos y detección de riesgos.</li>
-                                        <li>Puede ser contratado en turnos de 24 o 12 horas.</li>
-                                        <li>Este uniforme es más audaz</li>
-                                        <li>Cuentan con Acondicionamiento físico</li>
-                                        <li>Control de Centro de monitoreo</li>
-                                        <li>Control y manejo de eventos especiales</li>
-                                        <li>Brigadas de evacuación</li>
-                                        <li>Manejo y evacuación en la llamada de extorsión y amenaza de bomba: apoyo a las autoridades en la localización y acordonado de la zona</li>
-                                        
+                                         <li>Entrenados para prevenir y evitar riesgos.</li>
+                                         <li>Equipados con gas pimienta y PR-24.</li>
+                                         <li>Puede ser contratado en turnos de 24 o 12 horas.</li>
+                                         <li>Este uniforme es más audaz.</li>
+                                         <li>Tiene conocimiento en Defensa Personal</li>
                                      </ul>
+                            
+                                    <b>El elemento tiene una especialidad en:</b>
+                                     
+                                    <ul class="text-left">
+                                        <li>Control de accesos</li>
+                                        <li>Rondines perimetrales</li>
+                                        <li>Atención al usuario</li>
+                                        <li>Primeros Auxilios</li>
+                                        <li>Conato de Incendios</li>
+                                        <li>Brigadas de evacuación en emergencias</li>
+                                        <li>Manejo en la llamada de extorsión y amenaza de bomba</li>
+                                    </ul>
+
+                                    <b>Recomendado para escuelas, residenciales, empresas.</b>
+                                    <br>
+
+
                                         <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                                 </p>
                               </div>
@@ -701,7 +743,7 @@ background-position:center center;
                                 </p>
                               </div>
                               <div class="col-md-5 img100">
-                                  <img src="<?=base_url()?>includes/img/panase/gama2.jpg" alt="alfa" >
+                                  <img src="<?=base_url()?>includes/img/panase/gama234.jpg" alt="alfa" >
                               </div>
 
                           </div>
@@ -729,7 +771,7 @@ background-position:center center;
                                 <p>
                                     <h2>CUSTODIOS</h2>
                                     <b>Elementos de seguridad entrenados en técnicas avanzadas de protección y seguridad.</b>
-                                    <p>Nuestros custodios a bordo cuentan con el perfil del equipo gamma, su función es custodiar y  dar seguridad en el transporte. Preparados para brindar protección en el traslado vehicular de capitales, equipados para mantener una comunicación constante, entrenados para ubicar con anticipación al trasgresor y reaccionar asertivamente.</p>
+                                    <p>Nuestros custodios a bordo cuentan con el perfil del equipo gama, su función es custodiar y  dar seguridad en el transporte. Preparados para brindar protección en el traslado vehicular de capitales, equipados para mantener una comunicación constante, entrenados para ubicar con anticipación al trasgresor y reaccionar asertivamente.</p>
                                 </p>
                                 <a type="button" class="" data-dismiss="modal"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i></span></a>
                               </div>
@@ -969,7 +1011,7 @@ background-position:center center;
 
                 <div class="col-lg-3">
                   <img class="img-circle" src="<?=base_url()?>includes/img/panase/ot2.png" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-                  <h3>KAPPA SECURITY MOBILE</h3>
+                  <h3>KAPPA MOVILIDAD SEGURA</h3>
                   <p></p>
                   <p><a class="" data-toggle="modal" data-target=".kp"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i></span></a></p>
                 </div>
@@ -984,10 +1026,10 @@ background-position:center center;
                               <div class="col-md-12">
                                 <p>
                                     <div class="row text-center espec">
-                                            <div class="col-md-12"> <h3><b>Kappa Security Mobile</b></h3></div>
+                                            <div class="col-md-12"> <h3><b>Kappa Movilidad Segura</b></h3></div>
                                              <div class="col-md-5 col-md-offset-2">
                                                
-                                                <p>Si necesitas trasladarte tú o tu familia con absoluta seguridad bajo el cuidado de profesionales puedes contratar este servicio por hora o por destino. <br> El chofer está entrenado en técnicas ofensivas y defensivas, (opcionalmente puedes lleavr a un custodio adicional). <br> Utilizamos automóviles disuasivos, con y sin logotipo de seguridad. <br> <b><a href="#contacto">Solicita tu servicio con al menos 24 horas de anticpación.</a></b></p>
+                                                <p>Si necesitas trasladarte tú o tu familia con absoluta seguridad bajo el cuidado de profesionales puedes contratar este servicio por hora o por destino. <br> El chofer está entrenado en técnicas ofensivas y defensivas, (opcionalmente puedes llevar a un custodio adicional). <br> Utilizamos automóviles disuasivos, con y sin logotipo de seguridad. <br> <b><a href="#contacto">Solicita tu servicio con al menos 24 horas de anticpación.</a></b></p>
                                             
                                             </div>
                                             <div class="col-md-3">
@@ -1070,7 +1112,7 @@ background-position:center center;
                                    <div class="row text-center">
                                         <div class="col-md-8 col-md-offset-2">
                                             <h3><b>Estudios de vulnerabilidad y análisis de riesgo</b></h3>
-                                            <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a Identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborara sin ningún costo.</p>
+                                            <p>Se lleva a cabo a través de un recorrido por todas las instalaciones del servicio tomando fotografías y anotaciones de todos los puntos vulnerables. Nos ayuda a identificar condiciones, prácticas y riesgos que atenten contra la integridad de los recursos humanos, económicos y materiales de todo aquello que integre su patrimonio. Una vez contratado el servicio se le elaborará sin ningún costo.</p>
                                             <p>Se lleva a cabo por personal certificado en la materia. </p>
                                         </div>
 
@@ -1265,13 +1307,13 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
     <footer class="footer" style="background-image: url('<?=base_url()?>includes/img/panase/foo.jpg')">
         <div class="container text-center">
             <div class="row">
-                <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-phone"></i></h4>
+                <div class="col-md-4 contact-details foot-ico">
+                    <h4><a><i class="fa fa-phone"></a></i></h4>
                     <p>53-58-59-64</p>
                     <p>53-58-59-74</p>
                 </div>
                 <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-map-marker"></i></h4>
+                    <h4><a><i class="fa fa-map-marker"></i></a></h4>
                     <p>Ricardo Torres No 8<br> Lomas de Sotelo<br>Naucalpan Edo de México</p>
                 </div>
                 <div class="col-md-4 contact-details">
@@ -1281,7 +1323,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                 </div>
             </div>
             <div class="row social">
-                <div class="col-lg-12 foot-ico">
+                <div class="col-lg-12 foot-ico fa">
                     <ul class="list-inline">
                         <li><a href="https://www.facebook.com/SeguridadPrivadaPanase"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
                         </li>
@@ -1291,7 +1333,7 @@ Algunos delincuentes utilizan símbolos geométricos para marcar las casas que t
                         </li>
                     </ul>
                     <br>
-                    <a href="http://www.panamericanadeseguridad.com:2095/">INTRANET</a>
+                    <a class="fa" href="http://www.panamericanadeseguridad.com:2095/"><i class="fa fa-map-o">INTRANET</i></a></a>
                 </div>
             </div>
             <div class="row copyright">
